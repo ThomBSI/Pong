@@ -11,7 +11,7 @@ public class Graphic extends JPanel {
 	//Ball set
 	private int posBX = 0;
 	private int posBY = 0;
-	private int diamBall = 20;
+	private int diamBall = 40;
 	
 	//Left bloc position
 	private int posLX = 0;
@@ -30,7 +30,7 @@ public class Graphic extends JPanel {
 		g.fillRect(0, 0, this.getWidth(), this.getHeight());
 		
 		//Ball
-		g.setColor(Color.BLACK);
+		g.setColor(Color.GREEN);
 		g.fillOval(posBX, posBY, diamBall, diamBall);
 		
 		//Left bloc

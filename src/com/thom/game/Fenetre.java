@@ -30,14 +30,14 @@ public class Fenetre extends JFrame implements KeyListener {
 	private JLabel scoreR = new JLabel("0");
 	private int cmtL = 0;
 	private int cmtR = 0;
-//	static JPanel menu;
-//	private JPanel option;
 	private int sens = 70;
 	private int speed = 1;
 	static JButton start = new JButton("Nouvelle partie");
-//	static JButton retour = new JButton("Menu principal");
 	private boolean play = false;
 
+	
+
+//------------------------------------------------------------------------------------
 	
 	public Fenetre() {
 		this.setSize(new Dimension(1100,700));
@@ -73,8 +73,6 @@ public class Fenetre extends JFrame implements KeyListener {
 		scoreR.setFont(police);
 		barre.add(scoreL, BorderLayout.WEST);
 		barre.add(scoreR, BorderLayout.EAST);
-//		retour.addActionListener(new Main());
-//		barre.add(retour, BorderLayout.CENTER);
 		
 		//écran de jeu
 		pan = new JPanel();
@@ -82,16 +80,6 @@ public class Fenetre extends JFrame implements KeyListener {
 		pan.setPreferredSize(new Dimension(this.getWidth(), this.getHeight()));
 		pan.add(terrain, BorderLayout.CENTER);
 		pan.add(barre, BorderLayout.NORTH);
-		
-//		//écran menu principal
-//		menu = new JPanel();
-//		menu.setLayout(new BoxLayout(menu, BoxLayout.PAGE_AXIS));
-//		start.addActionListener(new Main());
-//		menu.add(start);
-		
-//		//Panel global
-//		global = new JPanel();
-//		global.add(menu);
 		
 		//écoute évenements clavier
 		this.addKeyListener(this);
@@ -103,13 +91,15 @@ public class Fenetre extends JFrame implements KeyListener {
 		
 	}
 	
+
+//------------------------------------------------------------------------------------
+	
 	private void go(){
 		int x = graph.getPosBX(), y = graph.getPosBY();
 		boolean moveX = true, moveY = true;
 		
 		while(true) {
 		
-			while(play) {
 				
 				//Rebond bloc gauche
 				if(x<graph.getPosLX()+graph.getWidBloc()) {
@@ -162,8 +152,6 @@ public class Fenetre extends JFrame implements KeyListener {
 				}catch(InterruptedException e){
 					e.printStackTrace();
 				}
-			}
-		
 		}
 	}
 	
@@ -186,8 +174,6 @@ public class Fenetre extends JFrame implements KeyListener {
 		if(e.getKeyCode()==77) {
 			graph.setPosRY(graph.getPosRY()+sens);
 		}
-//		//Vérif
-//		System.out.println("Ca écoute : "+e.getKeyCode());
 	}
 
 	public void keyReleased(KeyEvent e) {
@@ -197,13 +183,5 @@ public class Fenetre extends JFrame implements KeyListener {
 	}
 
 	
-//	
-//	public boolean isPlay() {
-//		return play;
-//	}
-//
-//	public void setPlay(boolean play) {
-//		this.play = play;
-//	}
 	
 }

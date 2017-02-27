@@ -10,23 +10,5 @@ public class Main /* implements  ActionListener*/ {
 	public static void main(String[] args){
 		fen = new Fenetre();
 	}
-//	
-//	public void actionPerformed(ActionEvent e) {
-//		if(e.getSource()==Fenetre.start) {
-//			Fenetre.global.removeAll();
-//			Fenetre.global.add(Fenetre.pan);
-//			Fenetre.global.revalidate();
-//			Fenetre.global.repaint();
-//			fen.setPlay(true);
-//			
-//		}
-//		if(e.getSource()==Fenetre.retour) {
-//			Fenetre.global.removeAll();
-//			Fenetre.global.add(Fenetre.menu);
-//			Fenetre.global.revalidate();
-//			Fenetre.global.repaint();
-//			fen.setPlay(false);
-//		}
-//	}
 	
 }
